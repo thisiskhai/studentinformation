@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Show information{% endblock %}
+{% block content %}
+<h1 class="text-info">Student Information</h1>
+<hr>
+{% for forming in formings %}
+
+<div class="container">
+    <div class="row">
+        <h3 class="col">{{forming.name}}</h3>
+        <a href="/show/{{ forming.id }}" class="my-2 btn btn-info">Detail</a>
+    </div>
+</div>
+{% endfor %}
+<a href="/" class="btn btn-primary btn-lg"> Add new Student information </a>
+{% endblock content %}

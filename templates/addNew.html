@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Create a New Student Information{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 class="text-info">Add New Student Information</h1>
+<hr>
+<h2>Submit form</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <hr>
+    <button type="submit" class="mt-2 btn btn-primary">Send</button>
+    <a href="/show"  class="mt-2 btn btn-primary">Show List Student</a>
+
+</form>
+
+{% endblock content %}

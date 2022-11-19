@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Show Detail Information{% endblock %}
+{% block content %}
+
+<h1 class="text-info">Student Detail Information</h1>
+<hr>
+<h3>Student name: {{ forming.name}}</h3>
+<p>Phone Number: {{ forming.phoneNumber}}</p>
+<p>Email: {{ forming.email}}</p>
+<p>Class: {{ forming.className}}</p>
+<p>Notes: {{ forming.note}}</p>
+
+
+<a href="/show/{{ forming.id }}/delete/" class="btn btn-danger btn-lg"> Delete </a>
+<a href="/show/{{ forming.id }}/update/" class="btn btn-success btn-lg"> Update </a>
+<a href="/show" class="btn btn-primary btn-lg"> Back </a>
+{% endblock %}
